@@ -2,6 +2,7 @@ package tn.esprit.mramaapp.entities;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "bonplan")
@@ -14,7 +15,7 @@ public class Bonplan {
     private String lieu;
     @ColumnInfo(name = "description")
     private String description;
-
+    @Ignore
     public Bonplan(int id, String solde, String lieu, String description) {
         this.id = id;
         this.solde = solde;
@@ -51,6 +52,12 @@ public class Bonplan {
     }
 
     public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Bonplan(String solde, String lieu, String description) {
+        this.solde = solde;
+        this.lieu = lieu;
         this.description = description;
     }
 }

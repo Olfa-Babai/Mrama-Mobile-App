@@ -50,6 +50,9 @@ public class Adapter extends RecyclerView.Adapter<ItemViewHolder> {
         holder.nom.setText(a.getNom());
         holder.tel.setText(String.valueOf(a.getService()));
         holder.mail.setText(String.valueOf(a.getMail()));
+        holder.img.setImageResource(R.drawable.rajelmodified);
+                //ImageView img= (ImageView) findViewById(R.id.image);
+        //img.setImageResource(R.drawable.my_image);
 
         holder.itemView.setOnClickListener(v -> {
             Toast.makeText(v.getContext(), a.getNom() + " Clicked", Toast.LENGTH_SHORT).show();

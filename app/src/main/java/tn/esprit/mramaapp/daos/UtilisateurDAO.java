@@ -33,7 +33,6 @@ public interface UtilisateurDAO {
     public Utilisateur getUtilisateurByMail(String email);
 
     //recherche
-
     @Query("SELECT * FROM utilisateur where nom=:search")
     public List<Utilisateur> searchUtilisateur(String search);
 

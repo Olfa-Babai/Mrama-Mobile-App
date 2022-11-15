@@ -52,4 +52,15 @@
         android:text="Notre application simplifie les opérations liées à un chantier. Pour les professionnels et non professionnels. Elle vous permet de commander ou faire appel à des ressources matérielles (camions, équipements...) et personnelles (ouvriers, chauffeur...). Comme aussi elle propose ou trouver un prestataire chargé du traitement des déchets proche de vos chantiers. En effet, une plateforme ou vous pouvez trouver le plombier, ouvier le plus proche et moins cher. Il n’existe pas vraiment d'application similaire mais celles qui existent sont dédiées au suivi des chantiers"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/stopm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Musique"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

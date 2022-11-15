@@ -15,6 +15,7 @@ import tn.esprit.mramaapp.R;
 import tn.esprit.mramaapp.daos.MaterielDAO;
 import tn.esprit.mramaapp.daos.UtilisateurDAO;
 import tn.esprit.mramaapp.database.myDatabase;
+import tn.esprit.mramaapp.entities.Materiel;
 import tn.esprit.mramaapp.ouvrierActivities.UpdateActivity;
 
 public class OutillageActivity extends AppCompatActivity {
@@ -34,6 +35,19 @@ public class OutillageActivity extends AppCompatActivity {
         acessDatabase();
      //  offlineMapView = findViewById(R.id.map);
        // offlineMapView.init(this, this);
+
+        // insert outils :
+        /*
+
+
+        int lastid=materieldao.findMateriels().size();
+        Materiel m=new Materiel(4,"Marteau","Geant",30,"Construction");
+        Materiel m1=new Materiel(5,"Pince","Carrefour",10,"Construction");
+        Materiel m2=new Materiel(6,"Cutter","Carrefour",50,"Construction");
+
+        materieldao.insertMateriel(m);
+        materieldao.insertMateriel(m1);
+        materieldao.insertMateriel(m2); */
 
         outils=findViewById(R.id.recyle);
         outils.setLayoutManager(new LinearLayoutManager(this));

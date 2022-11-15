@@ -1,6 +1,7 @@
 package tn.esprit.mramaapp.ouvrierActivities;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
     TextView role;
     TextView categoriesu;
     TextView tel;
+    ImageView img;
     public ItemViewHolder(@NonNull View itemView) {
         super(itemView);
         nom = itemView.findViewById(R.id.nom);
@@ -25,6 +27,7 @@ public class ItemViewHolder extends RecyclerView.ViewHolder {
        // role = itemView.findViewById(R.id.role);
         //categoriesu = itemView.findViewById(R.id.categoriesu);
         tel = itemView.findViewById(R.id.dispo);
+        img=itemView.findViewById(R.id.imgrecycle);
 
 
 

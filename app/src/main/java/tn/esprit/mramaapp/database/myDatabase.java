@@ -10,6 +10,7 @@ import androidx.room.RoomDatabase;
 
 import kotlin.jvm.Synchronized;
 import tn.esprit.mramaapp.daos.AvisDAO;
+import tn.esprit.mramaapp.daos.BonplanDAO;
 import tn.esprit.mramaapp.daos.MaterielDAO;
 import tn.esprit.mramaapp.daos.UtilisateurDAO;
 import tn.esprit.mramaapp.entities.Avis;
@@ -25,6 +26,7 @@ public abstract class myDatabase extends RoomDatabase {
     public abstract UtilisateurDAO utilisateurDAO();
     public abstract AvisDAO AvisDAO();
     public abstract MaterielDAO materielDAO();
+    public abstract BonplanDAO bonplanDAO();
     public static myDatabase getDatabase(Context ctx){
        //
         if(instance==null){

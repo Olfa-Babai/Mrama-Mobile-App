@@ -3,6 +3,7 @@ package tn.esprit.mramaapp.clientActivities;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,16 +24,17 @@ public class OutillageAdapter extends RecyclerView.Adapter<OutillageAdapter.Outi
         private TextView nomOutil;
         private TextView dOutil;
         private TextView prixOutil;
+        private ImageView img;
 
         public OutillageHolder(@NonNull View itemView) {
             super(itemView);
             nomOutil=itemView.findViewById(R.id.nom);
             dOutil=itemView.findViewById(R.id.dispo);
             prixOutil=itemView.findViewById(R.id.prix);
+            img=itemView.findViewById(R.id.imgrecycle);
 
         }
     }
-
 
     @NonNull
     @Override
@@ -48,6 +50,7 @@ public class OutillageAdapter extends RecyclerView.Adapter<OutillageAdapter.Outi
         holder.nomOutil.setText(currentOutil.getNom());
         holder.prixOutil.setText(String.valueOf(currentOutil.getPrix())+"dt");
         holder.dOutil.setText(currentOutil.getDisponibilite());
+        holder.img.setImageResource(R.drawable.tools);
     }
 
     @Override
