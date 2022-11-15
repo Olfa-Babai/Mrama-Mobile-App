@@ -17,12 +17,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyle"
-        android:layout_width="477dp"
-        android:layout_height="382dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="461dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="96dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchoutil"
+        app:layout_constraintTop_toBottomOf="@+id/mapbtn"
         tools:itemCount="4"
         tools:listitem="@layout/activity_item" />
 
@@ -30,8 +29,8 @@
         android:id="@+id/searchoutil"
         android:layout_width="216dp"
         android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="Recherche..."
         android:inputType="textPersonName"
@@ -48,5 +47,16 @@
         android:text="Chercher"
         app:layout_constraintStart_toEndOf="@+id/searchoutil"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mapbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/black"
+        android:text="Localiser nos magasins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchoutil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

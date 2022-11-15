@@ -27,11 +27,8 @@ public class Adapter extends RecyclerView.Adapter<ItemViewHolder> {
     MaterielDAO materieldao;
     UtilisateurDAO utilisateurDAO;
 
-   // datas d;
 
     Adapter(Context context) {
-
-      //  d = new datas();
         acessDatabase(context);
         ouvList =utilisateurDAO.getAllUtilisateurs();
     }
@@ -64,6 +61,13 @@ public class Adapter extends RecyclerView.Adapter<ItemViewHolder> {
     public int getItemCount() {
         return ouvList.size();
     }
+
+
+      public void setOuvriers(List<Utilisateur> u){
+        this.ouvList=u;
+        notifyDataSetChanged();
+    }
+
 
     public void acessDatabase(Context context)
     {

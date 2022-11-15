@@ -32,6 +32,9 @@ public interface UtilisateurDAO {
     @Query("SELECT * FROM utilisateur where mail=:email")
     public Utilisateur getUtilisateurByMail(String email);
 
+    @Query("SELECT * FROM utilisateur where categoriesu=:c")
+    public List<Utilisateur> getUtilisateurByCategorieU(String c);
+
     //recherche
     @Query("SELECT * FROM utilisateur where nom=:search")
     public List<Utilisateur> searchUtilisateur(String search);

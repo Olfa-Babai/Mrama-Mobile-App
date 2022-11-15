@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,11 +12,16 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import tn.esprit.mramaapp.R;
 import tn.esprit.mramaapp.daos.MaterielDAO;
 import tn.esprit.mramaapp.daos.UtilisateurDAO;
 import tn.esprit.mramaapp.database.myDatabase;
 import tn.esprit.mramaapp.entities.Materiel;
+import tn.esprit.mramaapp.ouvrierActivities.Map;
+import tn.esprit.mramaapp.ouvrierActivities.OuvriersActivity;
 import tn.esprit.mramaapp.ouvrierActivities.UpdateActivity;
 
 public class OutillageActivity extends AppCompatActivity {
@@ -28,6 +34,7 @@ public class OutillageActivity extends AppCompatActivity {
     MaterielDAO materieldao;
     EditText search;
     Button searchButton;
+    Button mapbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +68,33 @@ public class OutillageActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                EditText search=findViewById(R.id.searchoutil);
+                List<Materiel> mats=new ArrayList<>();
+                System.out.println(" search : "+search.getText().toString());
+                for(Materiel m : materieldao.findMateriels()){
+                    if(m.getNom().contains(search.getText().toString())){
+                        mats.add(m);
+                    }
+                }
+                System.out.println(mats);
+                oAdapter.setOutils(mats);
             }
         });
 
+
+
         oAdapter.setOutils(materieldao.findMateriels());
+
+
+        mapbtn = findViewById(R.id.mapbtn);
+        mapbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Toast.makeText(view.getContext(),"test",Toast.LENGTH_SHORT);
+                Intent i = new Intent(OutillageActivity.this, Map.class);
+                startActivity(i);
+            }
+        });
 
     }
     public void acessDatabase()

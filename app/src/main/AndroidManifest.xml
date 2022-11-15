@@ -80,9 +80,11 @@
         <activity
             android:name=".LoginvActivity"
             android:exported="false" />
+        <activity android:name=".ouvrierActivities.Map"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>
