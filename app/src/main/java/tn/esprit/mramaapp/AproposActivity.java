@@ -8,21 +8,21 @@ import android.view.View;
 import android.widget.Button;
 
 public class AproposActivity extends AppCompatActivity {
-//Button stopSong;
+Button stopSong;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apropos);
-       // final MediaPlayer mediaPlayer= MediaPlayer.create(this,R.raw.song);
-       // mediaPlayer.start();
+        final MediaPlayer mediaPlayer= MediaPlayer.create(this,R.raw.song);
+        mediaPlayer.start();
 
-        //stopSong=findViewById(R.id.stopm);
-        //stopSong.setOnClickListener(new View.OnClickListener() {
-       /*     @Override
+        stopSong=findViewById(R.id.stopm);
+        stopSong.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
-              //  mediaPlayer.stop();
+               mediaPlayer.stop();
             }
-        }); */
+        });
 
     }
 
