@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <androidx.cardview.widget.CardView card_view:cardBackgroundColor="@android:color/holo_green_dark" card_view:cardUseCompatPadding="true" card_view:cardElevation="3dp" card_view:cardCornerRadius="10dp" android:layout_height="wrap_content" android:layout_width="match_parent" xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" xmlns:android="http://schemas.android.com/apk/res/android" android:padding="20dp" android:orientation="vertical" android:layout_margin="5dp" android:background="@android:color/holo_green_dark">
+
+    <!-- TextView Nama Mahasiwa -->
+
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/txt_nama_mahasiswa" android:text="Nama Mahasiswa"/>
+
+    <!-- TextView Npm Mahasiswa -->
+
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/txt_npm_mahasiswa" android:text="NPM Mahasiswa"/>
+
+    <!-- TextView NoHp Mahasiswa -->
+
+
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/txt_nohp_mahasiswa" android:text="No HP Mahasiswa"/>
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
